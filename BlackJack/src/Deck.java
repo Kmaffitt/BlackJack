@@ -3,7 +3,7 @@ import java.util.*;
 public class Deck{
 	public static final Random random = new Random();
 	List<Card> deck = new ArrayList<Card>();
-	
+
 	public Deck(){
 		int deckIndex = 0;
 		for(int i = 0; i < 4; i ++){
@@ -26,10 +26,9 @@ public class Deck{
 	public Card draw(){
 		Card card = deck.get(deck.size()-1);
 		deck.remove(deck.size()-1);
-		
 		return card;
 	}
-	
+
 	public void printDeck(){
 		//for testing
 		for(Card temp: deck){
@@ -37,5 +36,9 @@ public class Deck{
 			System.out.print(" ");
 		}
 		System.out.print("\n");
+	}
+
+	public int deckSize(){
+		return deck.size();
 	}
 }
